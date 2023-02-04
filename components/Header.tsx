@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { AiFillGithub } from "react-icons/ai";
+import { AiOutlineHeatMap } from "react-icons/ai";
 import { Flex, Spacer } from "@chakra-ui/react";
 
 import muxLogo from "../public/mux-logo.svg";
