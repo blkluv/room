@@ -27,11 +27,11 @@ export default function Header(): JSX.Element {
       <Spacer />
       <Flex alignItems="center" padding="10px">
         <a
-          href="https://github.com/muxinc/meet"
+          href="https://arvrtise.com"
           target="_blank"
           rel="noreferrer"
         >
-          <AiFillGithub color="white" size="40px" />
+          <AiOutlineHeatMap color="white" size="40px" />
         </a>
       </Flex>
     </Flex>

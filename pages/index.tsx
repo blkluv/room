@@ -130,8 +130,8 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Mux Meet</title>
-        <meta name="description" content="Real-time meetings powered by Mux" />
+        <title>ARVRtise Haus</title>
+        <meta name="description" content="Real-time meetings" />
         <link rel="icon" href="/favicon.png" />
       </Head>
 
@@ -142,7 +142,7 @@ const Home = () => {
             <Box background="white" padding="4" borderRadius="4" width="360px">
               <form onSubmit={handleSubmit}>
                 <Stack spacing="4">
-                  <Heading>Join a Space</Heading>
+                  <Heading>Join a Room 💜🔑🚪</Heading>
 
                   <FormControl
                     isInvalid={isNameInputInvalid}
@@ -168,7 +168,7 @@ const Home = () => {
                     isDisabled={disableJoin}
                     isLoading={joining}
                   >
-                    Join a New Space
+                    Join a New Room
                   </Button>
                 </Stack>
               </form>

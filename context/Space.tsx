@@ -316,7 +316,7 @@ export const SpaceProvider: React.FC<Props> = ({ children }) => {
       try {
         space?.on(event, callback);
       } catch (_error) {
-        throw new Error("Join a space before adding event handlers.");
+        throw new Error("Join a room before adding event handlers.");
       }
     },
     [space]
@@ -325,7 +325,7 @@ export const SpaceProvider: React.FC<Props> = ({ children }) => {
   const publishMicrophone = useCallback(
     async (deviceId: string) => {
       if (!localParticipant) {
-        throw new Error("Join a space before publishing a device.");
+        throw new Error("Join a room before publishing a device.");
       }
       if (microphoneDeviceId !== deviceId) {
         const microphoneTrack = await getMicrophone(deviceId);
@@ -348,7 +348,7 @@ export const SpaceProvider: React.FC<Props> = ({ children }) => {
   const publishCamera = useCallback(
     async (deviceId: string) => {
       if (!localParticipant) {
-        throw new Error("Join a space before publishing a device.");
+        throw new Error("Join a room before publishing a device.");
       }
       if (cameraDeviceId !== deviceId) {
         const cameraTrack = await getCamera(deviceId);
@@ -372,7 +372,7 @@ export const SpaceProvider: React.FC<Props> = ({ children }) => {
     (deviceId: string): void => {
       if (!localParticipant) {
         throw new Error(
-          "Join a space and publish a device before un-publishing the device."
+          "Join a room and publish a device before un-publishing the device."
         );
       }
       const publishedDevice = localParticipant
@@ -407,7 +407,7 @@ export const SpaceProvider: React.FC<Props> = ({ children }) => {
               return publishedTracks[0];
             });
         } else {
-          throw new Error("Join a space before starting a screen share.");
+          throw new Error("Join a Room before starting a screen share.");
         }
       }
     } catch (error) {
@@ -430,7 +430,7 @@ export const SpaceProvider: React.FC<Props> = ({ children }) => {
       if (localParticipant) {
         localParticipant.unpublishTracks([screenShareTrack]);
       } else {
-        throw new Error("Join a space before stopping the screen share.");
+        throw new Error("Join a haus before stopping the screen share.");
       }
     } else {
       throw new Error("No screen share to stop.");
@@ -453,7 +453,7 @@ export const SpaceProvider: React.FC<Props> = ({ children }) => {
         return space?.submitAcrScore(score);
       } catch (error) {
         throw new Error(
-          "You must join a space before submitting an ACR score."
+          "You must join a room before submitting an ACR score."
         );
       }
     },
